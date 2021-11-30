@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "mocha --recursive --require test/helpers",
-    "start": "nodemon app.js",
+    "dev": "nodemon app.js",
     "css": "postcss css/tailwind.css -o public/css/tailwind.css"
   },
   "dependencies": {

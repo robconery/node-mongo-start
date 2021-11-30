@@ -70,4 +70,16 @@ That's it! You're ready to deploy:
 git push azure main
 ```
 
-You should be up and live.
+This will take a few minutes on first run as there's a lot to do, but when deployment is complete you can open your app using:
+
+```
+azx app open
+```
+
+Once again, this will take a few minutes to spin up for the very first time. Be patient... it'll happen! If there are problems, you can troubleshoot using:
+
+```
+azx app logs
+```
+
+You should be up and live. It's a good idea to read up on how AZX works so you can scale up your service and work with your backend data.
