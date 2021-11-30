@@ -26,7 +26,7 @@ const start = async function(){
 
   //default the port to PORT or 3000
   //Azure will set this automatically
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 8080;
   consola.info("Trying to start on", port);
   
   app.set('port', port);
