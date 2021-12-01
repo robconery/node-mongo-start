@@ -34,10 +34,9 @@ exports.init = function({GoogleSettings, GithubSettings}){
   }
   
   if(process.env.GITHUB_ID){
-    console.log("Wiring up GitHub", process.env.GITHUB_ID);
     passport.use(new GitHubStrategy(GithubSettings, async function(accessToken, refreshToken, profile, done) {
       try{
-        const user = User.oAuthLogin({
+        const user = await User.oAuthLogin({
           provider: "github",
           profile: {
             uid: profile.id,
@@ -48,7 +47,6 @@ exports.init = function({GoogleSettings, GithubSettings}){
           }
         });
         console.log("Authenticated with Github");
-        console.log(user);
         return done(null, {
           id: user.id,
           name: user.name,
