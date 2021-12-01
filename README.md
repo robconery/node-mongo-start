@@ -43,7 +43,7 @@ azx db create mongo
 
 Once all of this is done (it takes about 10 minutes to provision everything), you'll see a new directory in your project: `./azure`. This is where all of your Azure settings live. Inside that directory you'll see a `.env` file - you'll need to add your settings from your project file here for production. **Be sure you don't overwrite the DATABASE_URL** - this is how your app will talk to Cosmos DB.
 
-Just add these:
+Just add these - be sure to add them **above** the `DATABASE_URL` setting - there's a weirdness with the way these things are read from the file:
 
 ```
 GOOGLE_ID="GET ONE FROM GOOGLE"
