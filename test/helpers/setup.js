@@ -2,7 +2,10 @@
 const mongoose = require('mongoose');
 
 before(async () => {
-  await mongoose.connect('mongodb://localhost:27017/node-starter');
+  await mongoose.connect('mongodb://localhost:27017/node-starter',{
+    ssl: true,
+    retryWrites: false,
+  });
   
 });
 

@@ -87,14 +87,21 @@ router.get("/logout", function(req,res){
 });
 
 
-router.get('/google', passport.authenticate('google', { 
+router.get('/google', (req,res,next) => {
+  passport.authenticate('google', { 
+    callbackUrl: `${req.protocol}://${req.get("host")}/auth/google/callback`,
     scope: [
     'https://www.googleapis.com/auth/userinfo.profile',
     'https://www.googleapis.com/auth/userinfo.email'
-  ] 
-}));
+    ] 
+  })(req, res, next)
+});
 
-router.get('/github', passport.authenticate('github'));
+router.get('/github', (req, res, next) => {
+  passport.authenticate('github', {
+    callbackUrl: `${req.protocol}://${req.get("host")}/auth/github/callback`,
+  })(req, res, next)
+});
 
 
 router.get('/google/callback', passport.authenticate('google'), function(req,res){

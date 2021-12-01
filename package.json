@@ -12,11 +12,7 @@
     "css": "postcss css/tailwind.css -o public/css/tailwind.css"
   },
   "dependencies": {
-    "accounting": "^0.4.1",
-    "axios": "^0.24.0",
     "body-parser": "^1.19.0",
-    "commander": "^4.1.1",
-    "consola": "^2.11.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
@@ -25,9 +21,7 @@
     "express-flash": "^0.0.2",
     "express-session": "^1.17.0",
     "http-errors": "~1.6.2",
-    "inquirer": "^7.0.5",
     "markdown-it": "^12.2.0",
-    "moment": "^2.24.0",
     "mongodb": "^4.2.0",
     "mongoose": "^6.0.13",
     "morgan": "~1.9.0",
@@ -37,9 +31,7 @@
     "passport-github2": "^0.1.11",
     "passport-google-oauth2": "^0.2.0",
     "passport-local": "^1.0.0",
-    "request": "^2.65.0",
-    "shortid": "^2.2.15",
-    "uuid": "^3.4.0"
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
